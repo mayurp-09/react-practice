@@ -9,7 +9,12 @@ const Todo = () => {
         setTasks([...tasks, input]); //add new tasks
         setInput("") //clear input
     }
-  return (
+
+    const deleteTask = (index) => {
+      const updatTask = tasks.filter((_, i) => i !== index);
+      setTasks(updatTask);
+    }
+return (
     <div>
         <input
         type="text"
@@ -20,7 +25,9 @@ const Todo = () => {
     <button onClick={addTask}>Add Task</button>
     <ul>
         {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
+          <li key={index}>{task}
+          <button onClick={() => deleteTask(index)}>Delete</button>
+          </li>
         ))}
       </ul>
     </div>
