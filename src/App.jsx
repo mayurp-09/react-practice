@@ -3,6 +3,7 @@ import UseState1 from "./components/Programs/PasswordToggleApp";
 import UseState2 from "./components/Programs/TextInputApp";
 import Todo from "./components/Programs/Todo"
 import ChildToParent from "./components/Programs/ChildToParent";
+import Pokemon from "./components/Programs/Pokemon";
 // import more as needed
 
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
     useState1: <UseState1 />,
     useState2: <UseState2 />,
     Todo: <Todo />,
-    ChildToParent: <ChildToParent/>
+    ChildToParent: <ChildToParent/>,
+    Pokemon: <Pokemon/>
   };
 
   return (
@@ -23,6 +25,7 @@ const App = () => {
       <button className="button" onClick={() => setActive("useState2")}>Text Counting</button>
       <button className="button" onClick={() => setActive("Todo")}>Todo</button>
       <button className="button" onClick={() => setActive("ChildToParent")}>ChildToParent</button>
+      <button className="button" onClick={() => setActive("Pokemon")}>Pokemon</button>
       </div>
 
      <div className="output">
